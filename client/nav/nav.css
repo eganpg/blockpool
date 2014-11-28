@@ -1,0 +1,18 @@
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+.navbaricon {
+	margin-top: 1%;
+	text-align: left;
+}
+.navbar-default {
+	background-color: black;
+	color: white;
+	border-color: black;
+	border-radius: 0px;
+}
+.login {
+	text-decoration: none;
+	margin-top: 5%;
+	color: white;
+}

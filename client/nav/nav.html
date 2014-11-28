@@ -1,0 +1,22 @@
+<template name="nav">
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<i class="fa fa-cube fa-2x navbaricon"></i>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{pathFor 'Home'}}">Home</a></li>
+         <li><a href="{{pathFor 'About'}}">About</a></li>
+         <li><a href="{{pathFor 'Builder'}}">Builder</a></li>
+         <li class="login">{{> loginButtons align="right"}}</li>
+         
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container">
+    
+  </div>
+</nav>
+</template>

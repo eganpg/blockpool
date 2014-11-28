@@ -7,4 +7,6 @@ Router.map(function () {
   this.route('Home', {path:'/'});
   this.route('Builder', {path:'/builder'});
   this.route('About', {path:'/about'});
+  this.route('Board', {path:'/board'});
+  this.route('About', {path:'/about'});
 });

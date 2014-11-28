@@ -1,4 +1,6 @@
 <template name="builder">
+	{{#if currentUser}}
+
 	<div class="container">
 		<div class="row row_board">
 			<div class="col-md-1">
@@ -408,4 +410,8 @@
 		</div>
 
 	</div>
+	
+	{{else}}
+	<h1>Please Login to Play</h1>
+	{{/if}}
 </template>

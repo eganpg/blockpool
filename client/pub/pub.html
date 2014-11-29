@@ -1,4 +1,26 @@
 <template name="pub">
 	<h1>Create a New Public Game</h1>
-	<button class="btn btn-lg"><a href="{{pathFor 'Pub_New'}}">New Public Game</a></button>
+		{{> newBoard}}
+		{{> puber}}
+</template>
+
+<template name="newBoard">
+  <input type="button" value="New Rental" class="new_rental btn btn-lg" />
+  <div class="rental_form">
+    <input type="text" class="rental_name" placeholder="Name" />
+    <input type="text" class="rental_make" placeholder="Make" />
+    <input type="text" class="rental_model" placeholder="Model" />
+    <input type="submit" class="rental_submit" />
+  </div>
+</template>
+
+<template name="puber">
+	<h1>Being the list of boards here</h1>
+	{{#each publicboard}}	 
+	 <p>{{name}}  <a href="{{pathFor 'PubDetail'}}">Details</a></p>
+	{{/each}}
+</template>
+
+<template name="PubDetail">
+
 </template>

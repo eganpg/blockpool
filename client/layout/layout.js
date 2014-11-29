@@ -1,15 +1,3 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
-
-
 WebFontConfig = {
   google: { families: [ 'Maven+Pro:400,700:latin' ] }
 };
@@ -23,3 +11,12 @@ WebFontConfig = {
   s.parentNode.insertBefore(wf, s);
 })(); 
 
+ Template.puber.helpers({
+  publicboard: function () {
+    alert('looking for public boards');
+    // this helper returns a cursor of
+    // all of the posts in the collection
+    var test =  Publicboard.find().fetch();
+    console.log(test);
+  }
+});

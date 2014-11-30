@@ -10,7 +10,17 @@
 	margin-top: 2%;
 
 }
+.rental_submit {
+	margin-bottom:10%;
+}
 .rental_form {
 	padding-top: 2%;
 	text-align: center;
+}
+.submit_message {
+	text-align: center;
+	padding: 2%;
+}
+.row_board {
+	margin-top: 5%;
 }

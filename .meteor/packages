@@ -13,4 +13,5 @@ accounts-ui
 houston:admin
 autopublish
 email
+grove:stripe-checkout
 

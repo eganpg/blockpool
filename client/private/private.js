@@ -43,7 +43,8 @@ var checkout = StripeCheckout.configure({
     $('.submit_message').hide();
   };
 
-  
+// Displays the list of games based on the user who created in the referfriends template in private
+
   Template.referfriends.helpers({ 
       boards: function() {
       userid = Meteor.user()._id;
@@ -61,12 +62,7 @@ var checkout = StripeCheckout.configure({
 
       'click .existing': function () {
       Router.go('/refer_friends/');
-      userid = Meteor.user()._id;
-      var boards = Privateboard.find({ user: userid });
-      
-      
     },
-
 
     // onclick of submit button send a email with a referral code
 

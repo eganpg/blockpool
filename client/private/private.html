@@ -1,4 +1,5 @@
 <template name="private">
+	{{#if currentUser}}
 	<div class="row">
 		<div class="col-sm-12">
 			<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
@@ -16,7 +17,18 @@
 		</div>
 	</div>
 	{{> newBoard}}
+	{{ else }}
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
+			<hr class="hr">
+			<div class="submit_message">Login to Play</div>
+		</div>
+	</div>
+		{{/if}}
 </template>
+
+
 	<template name="newBoard">
 		<div class="row">
 			<div class="col-sm-12 first_one">
@@ -31,24 +43,29 @@
 	  	</div>
 	  </div>
 	</template>
-	<template name="referfriends">
-		<div class="row">
-			<div class="col-sm-12">
-				<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
-				<hr class="hr">
-				<h4 class="submit_message">Refer Your Friends</h4>
-				{{#each boards}}
-					{{> name}}
-				{{/each}}
-			</div>
-		</div>
 
+
+	<template name="referfriends">
+		
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
+					<hr class="hr">
+					{{#if currentUser }}
+					<h4 class="submit_message">Pick Your Poison</h4>
+					{{#each boards}}
+						<p style="text-align: center;">{{name}} <a href="{{pathFor 'PrivateDetail'}}">Details</a></p>
+					{{/each}}
+					{{else}}
+						<h4 class="submit_message">Login to Find Your blockpools</h4>
+					{{/if}}
+				</div>
+			</div>
 	</template>
 
 
 <template name="PrivateDetail">
 	{{#if currentUser}}
-
 	<div class="container">
 		<div class="row row_board">
 			<div class="col-md-1">

@@ -30,7 +30,7 @@ var checkout = StripeCheckout.configure({
       Router.go('PrivateDetail', {_id: referral_code});
         }
       else {
-        alert('die');
+        alert('you need to enter a valid referral code');
       }
 
     }
@@ -43,6 +43,15 @@ var checkout = StripeCheckout.configure({
     $('.submit_message').hide();
   };
 
+  
+  Template.referfriends.helpers({ 
+      boards: function() {
+      userid = Meteor.user()._id;
+      return Privateboard.find({ user: userid });
+      
+    }
+  });
+
   // Create a blockpool toggle
 
   Template.newBoard.events({
@@ -52,10 +61,10 @@ var checkout = StripeCheckout.configure({
 
       'click .existing': function () {
       Router.go('/refer_friends/');
-      userid = Meteor.user()._id
+      userid = Meteor.user()._id;
       var boards = Privateboard.find({ user: userid });
-      alert(boards);
-      console.log(boards);
+      
+      
     },
 
 
@@ -63,12 +72,13 @@ var checkout = StripeCheckout.configure({
 
     'click .rental_submit': function(event, template) {
       var amount = $('.block_amount').val();
+      var amount1 = amount.to_s;
       var total = amount * 100;
       Meteor.call('sendEmail',
             'eganpg@gmail.com',
-            'test@test.com',
+            'winning@blockpool.com',
             'Hello from Meteor!',
-            'You referral code is.' );
+            amount1 );
 
       // StripeCheckout Integration
       
@@ -89,6 +99,8 @@ var checkout = StripeCheckout.configure({
         model: $('.block_image').val(),
         user: Meteor.user()._id
       });
+      var last = Privateboard.last;
+      alert(last)
        Router.go('/refer_friends/');
     }
   });
@@ -99,7 +111,7 @@ var checkout = StripeCheckout.configure({
     'click .btn1': function() {
       var value = $('.btn1').val();
       var game_id = window.location.pathname;
-      var gamerid = game_id.substring(5);
+      var gamerid = game_id.substring(8);
       var value1 = Privatesquare.findOne({square_id: value,game_id: gamerid});
       console.log(gamerid);
       console.log(value1);

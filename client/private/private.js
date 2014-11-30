@@ -52,6 +52,10 @@ var checkout = StripeCheckout.configure({
 
       'click .existing': function () {
       Router.go('/refer_friends/');
+      userid = Meteor.user()._id
+      var boards = Privateboard.find({ user: userid });
+      alert(boards);
+      console.log(boards);
     },
 
 
@@ -65,7 +69,9 @@ var checkout = StripeCheckout.configure({
             'test@test.com',
             'Hello from Meteor!',
             'You referral code is.' );
+
       // StripeCheckout Integration
+      
       event.preventDefault();
       checkout.open({
         name: 'BlockPool',

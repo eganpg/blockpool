@@ -103,13 +103,19 @@ var checkout = StripeCheckout.configure({
   Template.PrivateDetail.rendered = function() {
     var game_id = window.location.pathname;
     var gamerid = game_id.substring(9);
-    var picked = Privatesquare.find({game_id: gamerid}).count();
-    console.log(picked);
-    for(i=0; i<picked; i++){
+    // var picked = Privatesquare.find({game_id: gamerid}).count();
+    for(i=0; i<101; i++){
+      iii = i+1;
+      ii = String(iii);
+      console.log(ii);
+      var occupied = Privatesquare.findOne({ square_id: ii });
+      console.log(occupied);
+      if(occupied != undefined){
       var btn = '.btn' + (i+1);
-      console.log(btn);
+      
       $(btn).css({"backgroundColor":"white","color":"black"});
     }
+  }
     
   }
 

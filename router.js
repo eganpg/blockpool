@@ -10,6 +10,6 @@ Router.map(function () {
   this.route('Private', {path:'/private'});
   this.route('Pub', {path:'/pub'});
   this.route('newBoard', {path:'/pub/new'});
-  this.route('PubDetail', {path:'/pub/:_id'});
+  this.route('PrivateDetail', {path:'/private/:_id'});
 });
 

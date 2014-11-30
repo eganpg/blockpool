@@ -12,10 +12,68 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-sm-12 first_one">
-			<h4>First One Here?</h4>
-			<button class="btn"><a href="{{pathFor 'Private'}}">Start a blockpool</a></button>
+	{{> newBoard}}
+</template>
+	<template name="newBoard">
+		<div class="row">
+			<div class="col-sm-12 first_one">
+				<h4>First One Here?</h4>
+	  		<input type="button" value="Start a blockpool" class="new_rental btn" /><br>
+	  		<div class="rental_form col-sm-4">
+	    		<input type="text" class="rental_name form-control" placeholder="Name">
+	    		<input type="text" class="rental_make form-control" placeholder="Make">
+	    		<input type="text" class="rental_model form-control" placeholder="Model" />
+	   		  <input type="submit" class="rental_submit form-control" />
+	  		</div>
+	  	</div>
+	  </div>
+	</template>
+
+
+<template name="PrivateDetail">
+	{{#if currentUser}}
+
+	<div class="container">
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="1" class="btn btn-default btn1"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="2" class="btn btn-default btn2"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="3" class="btn btn-default btn3"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="4" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="5" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="6" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="7" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="8" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="9" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="10" class="btn btn-default"/>
+			</div>
+			<div class="col-md-1">
+			</div>
 		</div>
+		
 	</div>
+	
+	{{else}}
+	<h1>Please Login to Play</h1>
+	{{/if}}
 </template>

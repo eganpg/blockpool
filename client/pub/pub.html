@@ -1,84 +1,63 @@
-<template name="pub">
-	<h1>Create a New Public Game</h1>
-		{{> private}}
-		{{> puber}}
-</template>
+	<template name="pub">
+		<h1>Create a New Public Game</h1>
+			{{> newBoard}}
+			{{> puber}}
+	</template>
 
-<template name="private">
-	<div class="row">
-		<div class="col-sm-12">
-			<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4 referral_code">
-			<div class="input-group input-group-lg">
-				<input type="text" class="private form-control" placeholder="Enter Referral Here."/>
-				<span class="input-group-addon">Submit</span>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12 first_one">
-			<h4>First One Here?</h4>
-			<button class="btn"><a href="{{pathFor 'Private'}}">Start a blockpool</a></button>
-		</div>
-	</div>
-</template>
 
-<template name="puber">
-	<h1>Being the list of boards here</h1>
-	{{#each publicboard}}	 
-	 <p>{{name}}  <a href="{{pathFor 'PubDetail'}}">Details</a></p>
-	{{/each}}
-</template>
+	<template name="puber">
+		<h1>Being the list of boards here</h1>
+		{{#each publicboard}}	 
+		 <p>{{name}}  <a href="{{pathFor 'PubDetail'}}">Details</a></p>
+		{{/each}}
+	</template>
 
 
 
-<template name="PubDetail">
-	{{#if currentUser}}
+	<template name="PubDetail">
+		{{#if currentUser}}
 
-	<div class="container">
-		<div class="row row_board">
-			<div class="col-md-1">
+		<div class="container">
+			<div class="row row_board">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="1" class="btn btn-default btn1"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="2" class="btn btn-default btn2"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="3" class="btn btn-default btn3"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="4" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="5" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="6" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="7" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="8" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="9" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+					<input type="button" value="10" class="btn btn-default"/>
+				</div>
+				<div class="col-md-1">
+				</div>
 			</div>
-			<div class="col-md-1">
-				<input type="button" value="1" class="btn btn-default btn1"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="2" class="btn btn-default btn2"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="3" class="btn btn-default btn3"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="4" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="5" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="6" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="7" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="8" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="9" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-				<input type="button" value="10" class="btn btn-default"/>
-			</div>
-			<div class="col-md-1">
-			</div>
+			
 		</div>
 		
-	</div>
-	
-	{{else}}
-	<h1>Please Login to Play</h1>
-	{{/if}}
-</template>
+		{{else}}
+		<h1>Please Login to Play</h1>
+		{{/if}}
+	</template>

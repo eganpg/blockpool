@@ -32,6 +32,7 @@ var cells = [[1,2,4],[8,16,32],[64,128,256]];
       var value = $('.btn1').val();
       var game_id = window.location.pathname;
       var gamerid = game_id.substring(5);
+      
       var value1 = Publicsquare.findOne({square_id: value,game_id: gamerid});
       console.log(gamerid);
       console.log(value1);

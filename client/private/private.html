@@ -1,6 +1,21 @@
 <template name="private">
-	<h1>Create a New Private Game</h1>
-	<h1>Enter you Private Game Code</h1>
-	<input type="text" class="private" placeholder="enter private access code"/>
-	<input type="submit" class="private" placeholder="submit"/>
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4 referral_code">
+			<div class="input-group input-group-lg">
+				<input type="text" class="private form-control" placeholder="Enter Referral Here."/>
+				<span class="input-group-addon">Submit</span>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 first_one">
+			<h4>First One Here?</h4>
+			<button class="btn"><a href="{{pathFor 'Private'}}">Start a blockpool</a></button>
+		</div>
+	</div>
 </template>

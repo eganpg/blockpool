@@ -1,10 +1,20 @@
 .about_title {
 	text-align: center;
-	margin-top: 10%;
 }
 .about_body {
 	text-align: center;
+	background: white;
+	color: black;
+	width: 50%;
+
 }
 .hr_about {
 	width: 45%;
+}
+.footer {
+	margin-bottom: 5%;
+	text-align: center;
+	background: white;
+	color: black;
+	width: 50%;
 }

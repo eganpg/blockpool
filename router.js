@@ -12,3 +12,4 @@ Router.map(function () {
   this.route('newBoard', {path:'/pub/new'});
   this.route('PubDetail', {path:'/pub/:_id'});
 });
+

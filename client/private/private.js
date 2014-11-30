@@ -16,12 +16,16 @@ var Privatesquare = new Meteor.Collection("privatesquare");
     },
 
     'click .rental_submit': function() {
-      alert('made it to submit');
+      Meteor.call('sendEmail',
+            'eganpg@gmail.com',
+            'eganpg@gmail.com',
+            'Hello from Meteor!',
+            'This is a test of Email.send.');
       Privateboard.insert({
 
-        name: $('.rental_name').val(),
-        make: $('.rental_make').val(),
-        model: $('.rental_model').val(),
+        name: $('.block_name').val(),
+        make: $('.block_amount').val(),
+        model: $('.block_image').val(),
         user: Meteor.user()._id
       });
     }

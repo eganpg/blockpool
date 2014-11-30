@@ -1,3 +1,5 @@
+//Declare Variables
+
 var Privateboard = new Meteor.Collection("privateboard");
 var Privatesquare = new Meteor.Collection("privatesquare");
 var checkout = StripeCheckout.configure({
@@ -8,12 +10,18 @@ var checkout = StripeCheckout.configure({
     // do something here (a Meteor.method, perhaps?)
   }
 });
+
+// Old public helpers
+
   Template.puber.helpers({
       privateboard: function () {
         var test =  Privateboard.find();
         return Privateboard.find();
       }
     });
+
+// Only goes to valid referral code board
+
   Template.private.events({
     'click .referral': function() {
       var referral_code = $('.private').val();
@@ -27,16 +35,28 @@ var checkout = StripeCheckout.configure({
 
     }
   })
+
+// Hides both the for views when page is loaded
+
   Template.newBoard.rendered = function() {
     $('.rental_form').hide();
     $('.submit_message').hide();
   };
 
+  // Create a blockpool toggle
+
   Template.newBoard.events({
     'click .new_rental': function () {
       $('.rental_form').toggle();
     },
+
+      'click .existing': function () {
+      Router.go('/refer_friends/');
+    },
+
+
     // onclick of submit button send a email with a referral code
+
     'click .rental_submit': function(event, template) {
       var amount = $('.block_amount').val();
       var total = amount * 100;
@@ -44,7 +64,7 @@ var checkout = StripeCheckout.configure({
             'eganpg@gmail.com',
             'test@test.com',
             'Hello from Meteor!',
-            'This is a test of Email.send.');
+            'You referral code is.' );
       // StripeCheckout Integration
       event.preventDefault();
       checkout.open({
@@ -54,16 +74,21 @@ var checkout = StripeCheckout.configure({
       });
 
       $('.submit_message').toggle();
+
       // Create a Database item
+      
       Privateboard.insert({
         name: $('.block_name').val(),
         make: $('.block_amount').val(),
         model: $('.block_image').val(),
         user: Meteor.user()._id
       });
+       Router.go('/refer_friends/');
     }
   });
 
+
+// Login for owning a square
   Template.PrivateDetail.events({
     'click .btn1': function() {
       var value = $('.btn1').val();

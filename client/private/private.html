@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="col-sm-12 first_one">
 				<h4>First One Here?</h4>
-	  		<input type="button" value="Start a blockpool" class="new_rental btn" /> <input type="button" value="Visit Existing" class="existing btn" /><br>
+	  		<input type="button" value="Start a blockpool" class="new_rental btn" /> <input type="button" value="Visit my Existing" class="existing btn" /><br>
 	  		<div class="rental_form col-sm-4 col-sm-offset-4">
 	    		<input type="text" class="block_name form-control" placeholder="name your blockpool">
 	    		<input type="text" class="block_amount form-control" placeholder="value of one square">
@@ -61,6 +61,22 @@
 				</div>
 			</div>
 	</template>
+	<template name="PrivateDetailStat">
+		<div class="row">
+				<div class="col-sm-12">
+					<h1 class="title"><i class="fa fa-cube fa-1x"></i>pool</h1>
+					<hr class="hr">
+					{{#if currentUser }}
+					<h4 class="submit_message">Pick Your Poison</h4>
+					<p>You have {{counter}} games that you own.</p>
+					<p>You have bought a total of {{total_square}} squares</p>
+					<p>You have {{need_sell}} squares you still need to sell</p>
+					{{else}}
+						<h4 class="submit_message">Login to Find Your blockpools</h4>
+					{{/if}}
+				</div>
+			</div>
+	</template>
 
 
 <template name="PrivateDetail">
@@ -68,7 +84,7 @@
 	<div class="container">
 		<div class="row row_board row_top">
 			<div class="col-md-1">
-				
+				<p><a href="{{pathFor 'PrivateDetailStat'}}">Stats</a></p>
 			</div>
 			<div class="col-md-1">
 				<input type="button" value="1" class="btn btn-default btn1"/>
@@ -105,7 +121,6 @@
 		</div>
 		<div class="row row_board">
 			<div class="col-md-1">
-				
 			</div>
 			<div class="col-md-1">
 				<input type="button" value="11" class="btn btn-default btn11"/>
@@ -140,8 +155,310 @@
 			<div class="col-md-1">
 			</div>
 		</div>
-	</div>
 	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="21" class="btn btn-default btn21"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="22" class="btn btn-default btn22"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="23" class="btn btn-default btn23"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="24" class="btn btn-default btn24"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="25" class="btn btn-default btn25"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="26" class="btn btn-default btn26"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="27" class="btn btn-default btn27"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="28" class="btn btn-default btn28"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="29" class="btn btn-default btn29"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="30" class="btn btn-default btn30"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="31" class="btn btn-default btn31"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="32" class="btn btn-default btn32"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="33" class="btn btn-default btn33"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="34" class="btn btn-default btn34"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="35" class="btn btn-default btn35"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="36" class="btn btn-default btn36"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="37" class="btn btn-default btn37"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="38" class="btn btn-default btn38"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="39" class="btn btn-default btn39"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="40" class="btn btn-default btn40"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="41" class="btn btn-default btn41"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="42" class="btn btn-default btn42"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="43" class="btn btn-default btn43"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="44" class="btn btn-default btn44"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="45" class="btn btn-default btn45"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="46" class="btn btn-default btn46"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="47" class="btn btn-default btn47"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="48" class="btn btn-default btn48"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="49" class="btn btn-default btn49"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="50" class="btn btn-default btn50"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="51" class="btn btn-default btn51"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="52" class="btn btn-default btn52"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="53" class="btn btn-default btn53"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="54" class="btn btn-default btn54"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="55" class="btn btn-default btn55"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="56" class="btn btn-default btn56"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="57" class="btn btn-default btn57"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="58" class="btn btn-default btn58"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="59" class="btn btn-default btn59"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="60" class="btn btn-default btn60"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="61" class="btn btn-default btn61"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="62" class="btn btn-default btn62"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="63" class="btn btn-default btn63"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="64" class="btn btn-default btn64"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="65" class="btn btn-default btn65"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="66" class="btn btn-default btn66"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="67" class="btn btn-default btn67"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="68" class="btn btn-default btn68"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="69" class="btn btn-default btn69"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="70" class="btn btn-default btn70"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="71" class="btn btn-default btn71"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="72" class="btn btn-default btn72"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="73" class="btn btn-default btn73"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="74" class="btn btn-default btn74"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="75" class="btn btn-default btn75"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="76" class="btn btn-default btn76"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="77" class="btn btn-default btn77"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="78" class="btn btn-default btn78"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="79" class="btn btn-default btn79"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="80" class="btn btn-default btn80"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="81" class="btn btn-default btn81"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="82" class="btn btn-default btn82"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="83" class="btn btn-default btn83"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="84" class="btn btn-default btn84"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="85" class="btn btn-default btn85"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="86" class="btn btn-default btn86"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="87" class="btn btn-default btn87"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="88" class="btn btn-default btn88"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="89" class="btn btn-default btn89"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="90" class="btn btn-default btn90"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	
+		<div class="row row_board">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="91" class="btn btn-default btn91"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="92" class="btn btn-default btn92"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="93" class="btn btn-default btn93"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="94" class="btn btn-default btn94"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="95" class="btn btn-default btn95"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="96" class="btn btn-default btn96"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="97" class="btn btn-default btn97"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="98" class="btn btn-default btn98"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="99" class="btn btn-default btn99"/>
+			</div>
+			<div class="col-md-1">
+				<input type="button" value="100" class="btn btn-default btn100"/>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<div class="row row_board">
+			<div class="col-sm-12">
+				{{#each squares}}
+					{{user}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
 	{{else}}
 		<div class="row">
 				<div class="col-sm-12">
@@ -150,5 +467,7 @@
 					<h4 class="submit_message">Login to Access this blockpool</h4>
 				</div>
 			</div>
+
 	{{/if}}
+
 </template>

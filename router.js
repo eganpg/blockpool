@@ -12,5 +12,6 @@ Router.map(function () {
   this.route('newBoard', {path:'/pub/new'});
   this.route('PrivateDetail', {path:'/private/:_id'});
   this.route('referfriends', {path:'/refer_friends'});
+  this.route('PrivateDetailStat', {path:'/stat'});
 });
 

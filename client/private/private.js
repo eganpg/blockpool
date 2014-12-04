@@ -101,14 +101,14 @@ Template.PrivateDetailStat.helpers({
 
       // StripeCheckout Integration
       
-      event.preventDefault();
-      checkout.open({
-        name: 'BlockPool',
-        description: 'easy sports fun',
-        amount: total  // this is cents, not dollars
-      });
+      // event.preventDefault();
+      // checkout.open({
+      //   name: 'BlockPool',
+      //   description: 'easy sports fun',
+      //   amount: total  // this is cents, not dollars
+      // });
 
-      $('.submit_message').toggle();
+      // $('.submit_message').toggle();
 
       // Create a Database item
       

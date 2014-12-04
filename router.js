@@ -1,6 +1,6 @@
 Router.configure({
   layoutTemplate:'layout'
-   trackPageView: true
+   // trackPageView: true
 });
 
 
